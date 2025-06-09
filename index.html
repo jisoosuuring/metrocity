@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매트로시티</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/fullpage.min.css" />
+    <script src="lib/fullpage.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".mySwiper", {
+                slidesPerView: "3",
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/매트로시티.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        window.onload = () => {
+            var myFullpage = new fullpage('#fullpage', {
+                // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage',
+                    'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage',
+                    'ninthPage', 'tenthPage', 'eleventhPage'],
+                navigation: true, /* left로 네비게이션 위치 조절 가능*/
+                navigationPosition: 'right',
+                navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6', 'Page 7', 'Page 8', 'Page 9', 'Page 10', 'Page 11'],
+                showActiveTooltip: true,
+                menu: '#menu',
+                responsiveWidth: 1024,
+
+
+                afterLoad: function (origin, destination, direction) {
+                    const header = document.querySelector('.header');
+
+                    if (destination.anchor === 'firstPage') {
+                        header.style.display = 'none';
+                    } else {
+                        header.style.display = 'block';
+                    }
+
+                    if (destination.anchor === 'eighthPage') {
+                        header.classList.remove('white-text');
+                        header.classList.add('black-text');
+                    } else {
+                        header.classList.remove('black-text');
+                    }
+                }
+            });
+
+
+        };
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#"><img src="img/로고.png" alt=""></a>
+            </h1> <!-- logo end -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><img src="img/비저너리 로고.png" alt=""></a></li>
+                    <li><a href="#">EXCLUSIVE</a></li>
+                    <li><a href="#">WOMEN</a></li>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">JEWELRY</a></li>
+                    <li><a href="#">WATCH</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#">ABOUT M</a></li>
+                    <li><a href="#">MEMBERSHIP</a></li>
+                </ul>
+            </nav><!-- nav end -->
+        </div> <!-- inner end -->
+    </header>
+
+    <div id="fullpage">
+        <section class="section fp-auto-height-responsive" id="section1">
+
+        </section><!-- section 01 end -->
+
+        <section class="section" id="section2">
+
+        </section> <!-- section 02 end -->
+
+
+        <section class="section fp-auto-height-responsive" id="section3">
+            <div class="inner">
+                <div class="item_wrap">
+                    <div class="item1">
+                        <a href="#">
+                            <p>WEARABLE ART PEICE</p>
+                        </a>
+                    </div><!-- item end -->
+
+                    <div class="item2">
+                        <a href="#">
+                            <p>1992년 이탈리아에서 시작된 메트로시티는 밀라노의 혁신적인 기술력과 피렌체의 장인 정신을 기반으로 한 패션&라이프스타일 브랜드입니다.<br />
+                                오랜 기간 동안 런웨이와 프레젠테이션들을 통해 ‘일상 속의 꾸뛰르’란 호평을 받으며, 특별한 컬렉션들을 제시하였습니다.<br />
+                                <br />
+                                그에 대한 하우스의 연구와 노하우들을 바탕으로 출시된 웨어러블한 아트피스, 비저너리의 첫 에피소드를 공개합니다.<br />
+                                매 시즌 3개의 에피소드로 진행되는 비저너리는 각 에피소드 주제에 따라 기획된 컬렉션들을<br />
+                                전시와 한정된 기간과 장소에서만 진행되는 프라이빗 비저너리 투어를 통해 선보일 예정입니다.
+                            </p>
+                        </a>
+                    </div><!-- item end -->
+                </div> <!-- item_wrap end -->
+            </div><!-- inner end -->
+        </section><!-- section 03 end -->
+
+        <section class="section" id="section4">
+
+        </section>
+
+        <section class="section" id="section5">
+            <div class="item_wrap">
+                <p>EXCLUSIVE</p>
+                <button type="button">
+                    VIEW MORE
+                </button>
+
+                
+            </div>
+        </section>
+
+        <section class="section" id="section6">
+            <div class="sticky-container">
+                <div class="left-images">
+                    <div class="image-frame"><img src="img/여1.png" alt=""></div>
+                    <div class="image-frame"><img src="img/여2.png" alt=""></div>
+                    <div class="image-frame"><img src="img/여3.png" alt=""></div>
+                    <div class="image-frame"><img src="img/여4.png" alt=""></div>
+                    <div class="image-frame"><img src="img/여5.png" alt=""></div>
+                    <!-- 추가 이미지들 -->
+                </div>
+                <div class="right-fixed">
+                    <div class="item_wrap">
+                        <p>FOR WOMEN</p>
+                        <span>SPECIAL COLLECTION</span>
+                        <button type="button">VIEW MORE</button>
+                        <img class="flower" src="img/꽃 여.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="section7">
+            <div class="sticky-container">
+                <div class="left-images">
+                    <div class="image-frame"><img src="img/남1.png" alt=""></div>
+                    <div class="image-frame"><img src="img/남2.png" alt=""></div>
+                    <div class="image-frame"><img src="img/남3.png" alt=""></div>
+                    <div class="image-frame"><img src="img/남4.png" alt=""></div>
+                    <div class="image-frame"><img src="img/남5.png" alt=""></div>
+                    <!-- 추가 이미지들 -->
+                </div>
+                <div class="right-fixed">
+                    <div class="item_wrap">
+                        <p>FOR MEN</p>
+                        <span>SPECIAL COLLECTION</span>
+                        <button type="button">VIEW MORE</button>
+                        <img class="flower" src="img/꽃 남.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="section8">
+            <div class="item_wrap">
+                <p>JEWELRY</p>
+                <span> JEWELRY COLLECTION</span>
+                <button type="button">
+                    VIEW MORE
+                </button>
+            </div>
+        </section>
+
+        <section class="section" id="section9">
+            <div class="item_wrap">
+                <p>TIMEPIECE</p>
+                <span> TIMEPIECE COLLECTION</span>
+                <button type="button">
+                    VIEW MORE
+                </button>
+            </div>
+        </section>
+
+
+        <section class="section" id="section10">
+            <div class="rtw-container">
+                <!-- 왼쪽 텍스트 영역 -->
+                <div class="item_wrap">
+                    <p>READY TO WEAR</p>
+                    <span>RTW COLLECTION</span>
+                    <button type="button">VIEW MORE</button>
+                </div>
+
+                <!-- 오른쪽 Swiper 슬라이드 영역 -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/image (1).png" alt="RTW 1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/image (3).png" alt="RTW 2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/image (4).png" alt="RTW 3" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/image (5).png" alt="RTW 4" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/image (6).png" alt="RTW 5" />
+                        </div>
+                        <div class="swiper-slide">
+
+                        </div>
+                    </div>
+                    <!-- 페이지네이션/내비게이션 원하면 아래 추가 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <img src="img/Layer 2.png" alt="flower" class="flower-img">
+        </section>
+
+
+        <section class="section" id="section11">
+            <div class="item_wrap">
+                <p>METROCITY BENEFIT</p>
+                <span>Membership Exclusive Benefit</span>
+                <button type="button">
+                    VIEW MORE
+                </button>
+            </div>
+        </section>
+
+
+
+        <footer class="section footer fp-auto-height" id="footer">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>METROCITY</h3>
+                    <ul>
+                        <li>브랜드소개</li>
+                        <li>매장안내</li>
+                        <li>개인정보취급방침</li>
+                        <li>이용약관</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li>고객센터</li>
+                        <li>1:1 문의하기</li>
+                        <li>주문/배송 조회</li>
+                        <li>멤버십</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>MY PAGE</h3>
+                    <ul>
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>아이디/비밀번호 찾기</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SNS</h3>
+                    <div class="sns-icons">
+                        <img src="img/페이스북.png" alt="Facebook" />
+                        <img src="img/인스타.png" alt="Instagram" />
+                        <img src="img/유튜브.png" alt="YouTube" />
+                        <img src="img/카카오.png" alt="KakaoTalk" />
+                    </div>
+                </div>
+                <div class="footer-col cs-center">
+                    <h3>Online Cs Center</h3>
+                    <p>1566-1165</p>
+                    <p>MON -THU 10:30~17:30</p>
+                    <p>(Lunch 12:30~13:30)</p>
+                    <p>EVERY Fri-Sun HOLIDAY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="company-info">
+                    <p>(주)엠티콜렉션 | 대표이사 : 양지해</p>
+                    <p>서울특별시 강남구 도산대로 417 (청담동) | 사업자등록번호 : 218-81-20703 <a href="#">사업자정보확인</a></p>
+                    <p>통신판매업신고 : 제 2018-서울강남-00416 호 | 개인정보관리책임자 : 유종오</p>
+                    <p>COPYRIGHT METROCITY. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="insurance-info">
+                    <p>소비자피해보상 보상보험</p>
+                    <p>고객님은 안전거래를 위해 현금 등으로 결제시 쇼핑몰에서 가입한 구매안전 서비스로</p>
+                    <p>소비자 피해보상보험 서비스를 이용할 수 있습니다.</p>
+                    <p>서비스 가입사실확인</p>
+                </div>
+            </div>
+        </footer>
+
+
+</body>
+
+</html>
